@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Tin Roof Studio — websites and small tools, finished properly</title>
+<meta name="description" content="Hot Tin Roof Studio builds websites and small tools in code, and finishes the parts most people skip.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>">
+<style>
+:root{
+  --paper:#fbfaf8; --ink:#1a1917; --muted:#6b665e; --rule:#e3ded5;
+  --accent:#b4532a; --accent-soft:#f3e7df;
+  --measure:34rem;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#141311;--ink:#e9e5de;--muted:#9a938a;--rule:#2d2a26;
+        --accent:#e08a5c;--accent-soft:#2a211c;}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:clamp(1rem,.96rem + .2vw,1.075rem);
+  line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;position:fixed;z-index:10;background:var(--ink);
+  color:var(--paper);padding:.6rem 1rem;border-radius:.25rem}
+.wrap{max-width:62rem;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+header{padding:clamp(3rem,9vw,6rem) 0 0}
+.mark{font-family:var(--serif);font-size:1.0625rem;letter-spacing:.01em;margin:0;font-weight:400}
+.mark b{font-weight:600}
+.mark span{color:var(--muted)}
+
+h1{
+  font-family:var(--serif);font-weight:400;
+  font-size:clamp(2.15rem,1.3rem + 4.1vw,4.25rem);
+  line-height:1.08;letter-spacing:-.018em;
+  margin:clamp(2.5rem,7vw,4.5rem) 0 0;max-width:17ch;text-wrap:balance;
+}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{max-width:var(--measure);margin:1.5rem 0 0;color:var(--muted);
+  font-size:clamp(1.05rem,1rem + .35vw,1.25rem)}
+
+hr{border:0;border-top:1px solid var(--rule);margin:clamp(3rem,8vw,5.5rem) 0 0}
+
+section{padding:clamp(2.75rem,7vw,4.5rem) 0 0}
+h2{font-family:var(--serif);font-weight:400;font-size:.9375rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--muted);margin:0 0 2rem}
+h3{font-family:var(--serif);font-weight:600;font-size:1.3rem;letter-spacing:-.01em;margin:0 0 .5rem}
+p{margin:0 0 1rem;max-width:var(--measure)}
+p:last-child{margin-bottom:0}
+
+.grid{display:grid;gap:clamp(1.75rem,4vw,2.75rem);grid-template-columns:1fr}
+@media (min-width:46rem){.grid{grid-template-columns:1fr 1fr}}
+.item{padding-top:1.25rem;border-top:1px solid var(--rule)}
+.item p{color:var(--muted);max-width:30rem}
+.num{display:block;font-family:var(--serif);font-size:.8125rem;color:var(--accent);
+  letter-spacing:.08em;margin-bottom:.75rem}
+
+ul.plain{list-style:none;padding:0;margin:0;max-width:var(--measure)}
+ul.plain li{padding:.6rem 0;border-top:1px solid var(--rule);color:var(--muted);
+  display:flex;gap:.9rem;align-items:baseline}
+ul.plain li::before{content:"—";color:var(--accent);flex:none}
+
+.contact{margin-top:1.25rem}
+.contact a{
+  font-family:var(--serif);font-size:clamp(1.35rem,1.1rem + 1.1vw,2rem);
+  color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent-soft);
+  padding-bottom:.1em;transition:border-color .15s ease;word-break:break-word;
+}
+.contact a:hover{border-bottom-color:var(--accent)}
+
+footer{margin-top:clamp(3.5rem,9vw,6rem);padding:1.5rem 0 3rem;
+  border-top:1px solid var(--rule);color:var(--muted);font-size:.875rem;
+  display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;justify-content:space-between}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header>
+    <p class="mark"><b>Hot Tin Roof</b> <span>Studio</span></p>
+    <h1>We finish the parts<br>most people <em>skip</em>.</h1>
+    <p class="lede">A small studio building websites and tools in code — for the
+      people who notice the empty state, the error message and the keyboard focus ring.</p>
+  </header>
+
+  <hr>
+
+  <main id="main">
+
+    <section aria-labelledby="make">
+      <h2 id="make">What we make</h2>
+      <div class="grid">
+        <div class="item">
+          <span class="num">01</span>
+          <h3>Website templates</h3>
+          <p>Complete ones. Every page built, not just the homepage. Real content
+             structure, working light and dark themes, and correct behaviour at
+             every width — including the ones nobody tests.</p>
+        </div>
+        <div class="item">
+          <span class="num">02</span>
+          <h3>Small tools</h3>
+          <p>Narrow things that do one job properly, for people underserved by
+             software priced for companies ten times their size.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">How we work</h2>
+      <div class="grid">
+        <div class="item">
+          <span class="num">01</span>
+          <h3>Completeness over flourish</h3>
+          <p>Anyone can build a convincing hero section. The value is in the
+             forty screens behind it that are tedious to get right.</p>
+        </div>
+        <div class="item">
+          <span class="num">02</span>
+          <h3>Written in code</h3>
+          <p>Hand-written HTML and CSS, no page builder and no framework tax.
+             This page makes zero network requests beyond itself.</p>
+        </div>
+      </div>
+      <ul class="plain" style="margin-top:2.25rem">
+        <li>Accessible by default — semantic markup, visible focus, honest contrast</li>
+        <li>Fast because there is nothing to download, not because it was optimised later</li>
+        <li>Readable source, so whoever inherits it can actually change it</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="talk">
+      <h2 id="talk">Get in touch</h2>
+      <p>Work, questions, or something you think we'd find interesting.</p>
+      <p class="contact"><a href="mailto:hottinroofstudio@gmail.com">hottinroofstudio@gmail.com</a></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <span>Hot Tin Roof Studio</span>
+    <span>Built by hand. No trackers, no cookies.</span>
+  </footer>
+
+</div>
+</body>
+</html>
