@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="x-apple-disable-message-reformatting">
+<meta name="format-detection" content="telephone=no,address=no,email=no,date=no">
+<!-- Tell clients we genuinely support both schemes. Without these two lines,
+     Apple Mail and Outlook Mac will invert the email themselves instead of
+     letting our dark palette apply. -->
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<title>Something new</title>
+
+<!--[if mso]>
+<noscript><xml><o:OfficeDocumentSettings>
+  <o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings></xml></noscript>
+<style>
+  /* Outlook Windows renders with Word. It ignores webfonts, so name a real
+     fallback or it silently substitutes Times New Roman. */
+  * { font-family: Arial, Helvetica, sans-serif !important; }
+  table { border-collapse: collapse !important; }
+</style>
+<![endif]-->
+
+<style>
+  /* ===================================================================
+     WEATHERPROOF — Newsletter
+     -------------------------------------------------------------------
+     COLOURS — find and replace these six values to rebrand:
+       #FAFAF8  page background (light)   — never use #FFFFFF, see note
+       #FFFFFE  card background (light)
+       #1C1B19  primary text (light)      — never use #000000, see note
+       #6B665E  secondary text (light)
+       #B4532A  accent / links / button
+       #12110F  page background (dark)
+
+     WHY NOT PURE WHITE AND BLACK:
+     Gmail and Outlook invert pure #FFFFFF and #000000 most aggressively.
+     Near-white and near-black are very often left alone. This single choice
+     prevents more dark-mode damage than anything else in this file.
+     =================================================================== */
+
+  html, body { margin:0 !important; padding:0 !important; height:100% !important; width:100% !important; }
+  body { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
+
+  /* Every table must carry border="0" AND border:none. The attribute alone
+     does not stop Gmail's dark mode drawing glowing white gridlines. */
+  table { border-collapse:collapse !important; border:none; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+  img { border:0; height:auto; line-height:100%; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; display:block; }
+
+  a { color:#B4532A; text-decoration:underline; }
+
+  /* iOS turns dates, addresses and numbers into blue links. Undo it. */
+  a[x-apple-data-detectors] { color:inherit !important; text-decoration:none !important;
+    font-size:inherit !important; font-family:inherit !important; font-weight:inherit !important; line-height:inherit !important; }
+
+  /* ---------- Responsive: single breakpoint, fluid-hybrid ---------- */
+  @media screen and (max-width:620px) {
+    .w-full   { width:100% !important; max-width:100% !important; }
+    .w-pad    { padding-left:24px !important; padding-right:24px !important; }
+    .w-stack  { display:block !important; width:100% !important; max-width:100% !important; }
+    .w-center { text-align:center !important; }
+    .w-h1     { font-size:28px !important; line-height:34px !important; }
+    .w-hide-sm{ display:none !important; }
+    .w-gap    { height:24px !important; }
+  }
+
+  /* ---------- Dark mode: Apple Mail, Outlook Mac ---------- */
+  @media (prefers-color-scheme: dark) {
+    .d-page   { background-color:#12110F !important; }
+    .d-card   { background-color:#1C1B19 !important; }
+    .d-text   { color:#EDE9E2 !important; }
+    .d-muted  { color:#9A938A !important; }
+    .d-rule   { border-color:#332F2B !important; background-color:#332F2B !important; }
+    .d-accent { color:#E08A5C !important; }
+    /* Logos with transparency vanish on dark grounds. Swap, don't hope. */
+    .d-logo-light { display:none !important; }
+    .d-logo-dark  { display:block !important; width:auto !important; max-height:inherit !important; overflow:visible !important; float:none !important; }
+  }
+
+  /* ---------- Dark mode: Outlook.com and Outlook mobile ----------
+     These clients rewrite colours and prefix our selectors instead of
+     honouring the media query. Same rules, different hooks. */
+  [data-ogsc] .d-page   { background-color:#12110F !important; }
+  [data-ogsc] .d-card   { background-color:#1C1B19 !important; }
+  [data-ogsc] .d-text   { color:#EDE9E2 !important; }
+  [data-ogsc] .d-muted  { color:#9A938A !important; }
+  [data-ogsc] .d-accent { color:#E08A5C !important; }
+  [data-ogsb] .d-page   { background-color:#12110F !important; }
+  [data-ogsb] .d-card   { background-color:#1C1B19 !important; }
+</style>
+</head>
+
+<body class="d-page" style="margin:0;padding:0;background-color:#FAFAF8;">
+
+<!-- Preheader: the grey line after the subject in the inbox. Leave it empty
+     and clients scrape the first text they find, usually "View in browser". -->
+<div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;font-family:Arial,sans-serif;">
+  A short note about what changed and why you might care.
+  &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847; &#8199;&#65279;&#847;
+</div>
+
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" class="d-page" style="border:none;background-color:#FAFAF8;">
+<tr>
+<td align="center" style="padding:32px 12px;">
+
+  <!--[if mso]><table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600"><tr><td><![endif]-->
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="600" class="w-full d-card"
+         style="border:none;width:600px;max-width:600px;background-color:#FFFFFE;">
+
+    <tr>
+      <td class="w-pad" style="padding:36px 48px 0;">
+        <p class="d-text" style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:17px;line-height:22px;color:#1C1B19;"><strong>Your Product</strong></p>
+      </td>
+    </tr>
+
+    <!-- ===== Image slot =====
+         REPLACE the src with an absolute https:// URL to your own hosted image
+         before sending. Relative paths work for previewing the file locally but
+         will not load in an inbox.
+         Width declared as an attribute AND in CSS. Outlook Windows ignores the
+         CSS and will blow the image up to its native size without the attribute.
+         Always ship a real alt string: images are blocked by default in Outlook
+         and many corporate clients, and alt text is all those readers get. -->
+    <tr>
+      <td class="w-pad" style="padding:28px 48px 0;">
+        <img src="images/placeholder-504x252.png" width="504" height="252" alt="A short, literal description of the image"
+             class="w-full" style="display:block;width:504px;max-width:100%;height:auto;border:0;border-radius:4px;">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="w-pad" style="padding:28px 48px 0;">
+        <p class="d-accent" style="margin:0 0 8px;font-family:Georgia,serif;font-size:12px;line-height:16px;color:#B4532A;letter-spacing:0.08em;text-transform:uppercase;">New</p>
+        <h1 class="d-text w-h1" style="margin:0;font-family:Georgia,'Times New Roman',serif;font-weight:normal;font-size:32px;line-height:38px;color:#1C1B19;">
+          The thing you asked for
+        </h1>
+        <p class="d-muted" style="margin:14px 0 0;font-family:Arial,Helvetica,sans-serif;font-size:16px;line-height:26px;color:#6B665E;">
+          Lead with what changed for the reader, not with how hard it was to build.
+          One paragraph is usually enough before the list.
+        </p>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="w-pad" style="padding:26px 48px 0;">
+        <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:none;">
+          <tr>
+            <td class="d-accent" valign="top" width="22" style="width:22px;padding:0 0 12px;font-family:Arial,sans-serif;font-size:15px;line-height:23px;color:#B4532A;">&bull;</td>
+            <td class="d-muted" valign="top" style="padding:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#6B665E;">The first concrete improvement, described in plain words</td>
+          </tr>
+          <tr>
+            <td class="d-accent" valign="top" width="22" style="width:22px;padding:0 0 12px;font-family:Arial,sans-serif;font-size:15px;line-height:23px;color:#B4532A;">&bull;</td>
+            <td class="d-muted" valign="top" style="padding:0 0 12px;font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#6B665E;">The second, with a number in it if you have one</td>
+          </tr>
+          <tr>
+            <td class="d-accent" valign="top" width="22" style="width:22px;font-family:Arial,sans-serif;font-size:15px;line-height:23px;color:#B4532A;">&bull;</td>
+            <td class="d-muted" valign="top" style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#6B665E;">The third, which is usually the one people actually wanted</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="w-pad" style="padding:30px 48px 0;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
+          href="https://example.com/whats-new" style="height:46px;v-text-anchor:middle;width:176px;" arcsize="9%" strokecolor="#B4532A" fillcolor="#B4532A">
+          <w:anchorlock/><center style="color:#FFFFFE;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">See what changed</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-- -->
+        <a href="https://example.com/whats-new" style="background-color:#B4532A;border-radius:4px;color:#FFFFFE;display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;line-height:46px;text-align:center;text-decoration:none;width:176px;-webkit-text-size-adjust:none;">See what changed</a>
+        <!--<![endif]-->
+      </td>
+    </tr>
+
+    <tr><td class="w-pad" style="padding:36px 48px 0;">
+      <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="border:none;">
+        <tr><td class="d-rule" style="border:none;background-color:#E6E1D8;height:1px;line-height:1px;font-size:0;">&nbsp;</td></tr>
+      </table>
+    </td></tr>
+
+    <tr>
+      <td class="w-pad" align="center" style="padding:24px 48px 40px;">
+        <p class="d-muted" style="margin:0;font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:20px;color:#6B665E;">
+          <a class="d-accent" href="{{unsubscribe}}" style="color:#B4532A;">Unsubscribe</a> &nbsp;&middot;&nbsp;
+          <a class="d-accent" href="{{webview}}" style="color:#B4532A;">View in browser</a><br>
+          Your Product, 1 Example Street, London
+        </p>
+      </td>
+    </tr>
+  </table>
+  <!--[if mso]></td></tr></table><![endif]-->
+
+</td>
+</tr>
+</table>
+</body>
+</html>
